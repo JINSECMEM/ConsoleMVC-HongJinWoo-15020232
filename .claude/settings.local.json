@@ -1,7 +1,9 @@
-﻿{
+{
   "permissions": {
     "allow": [
-      "PowerShell(Set-Content *)"
+      "PowerShell(Set-Content *)",
+      "Bash(git rm *)",
+      "Bash(grep -E \"\\(\\\\\\\\.vs/|/Debug/|/x64/|\\\\\\\\.obj$|\\\\\\\\.ipch$|\\\\\\\\.pdb$|\\\\\\\\.exe$|\\\\\\\\.ilk$|\\\\\\\\.idb$|\\\\\\\\.suo$|\\\\\\\\.wsuo$|Browse\\\\\\\\.VC\\\\\\\\.db\\)\")"
     ]
   }
 }

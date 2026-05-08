@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -81,6 +81,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -96,6 +97,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -109,6 +111,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,6 +127,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,7 +135,61 @@
     </Link>
   </ItemDefinitionGroup>
 
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Database\OrderRepository.cpp" />
+    <ClCompile Include="Database\SampleRepository.cpp" />
+    <ClCompile Include="Database\InventoryRepository.cpp" />
+    <ClCompile Include="Database\ProductionRepository.cpp" />
+    <ClCompile Include="Database\ShipmentRepository.cpp" />
+    <ClCompile Include="Services\OrderService.cpp" />
+    <ClCompile Include="Services\InventoryService.cpp" />
+    <ClCompile Include="Services\ProductionService.cpp" />
+    <ClCompile Include="Services\ShipmentService.cpp" />
+    <ClCompile Include="Views\ConsoleHelper.cpp" />
+    <ClCompile Include="Views\MenuView.cpp" />
+    <ClCompile Include="Views\OrderView.cpp" />
+    <ClCompile Include="Views\InventoryView.cpp" />
+    <ClCompile Include="Views\ProductionView.cpp" />
+    <ClCompile Include="Views\ShipmentView.cpp" />
+    <ClCompile Include="Views\MonitorView.cpp" />
+    <ClCompile Include="Controllers\AppController.cpp" />
+    <ClCompile Include="Controllers\OrderController.cpp" />
+    <ClCompile Include="Controllers\InventoryController.cpp" />
+    <ClCompile Include="Controllers\ProductionController.cpp" />
+    <ClCompile Include="Controllers\ShipmentController.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Utils\Utils.h" />
+    <ClInclude Include="Models\Order.h" />
+    <ClInclude Include="Models\Sample.h" />
+    <ClInclude Include="Models\Inventory.h" />
+    <ClInclude Include="Models\ProductionLine.h" />
+    <ClInclude Include="Models\ProductionJob.h" />
+    <ClInclude Include="Models\Shipment.h" />
+    <ClInclude Include="Database\IRepository.h" />
+    <ClInclude Include="Database\OrderRepository.h" />
+    <ClInclude Include="Database\SampleRepository.h" />
+    <ClInclude Include="Database\InventoryRepository.h" />
+    <ClInclude Include="Database\ProductionRepository.h" />
+    <ClInclude Include="Database\ShipmentRepository.h" />
+    <ClInclude Include="Services\OrderService.h" />
+    <ClInclude Include="Services\InventoryService.h" />
+    <ClInclude Include="Services\ProductionService.h" />
+    <ClInclude Include="Services\ShipmentService.h" />
+    <ClInclude Include="Views\ConsoleHelper.h" />
+    <ClInclude Include="Views\MenuView.h" />
+    <ClInclude Include="Views\OrderView.h" />
+    <ClInclude Include="Views\InventoryView.h" />
+    <ClInclude Include="Views\ProductionView.h" />
+    <ClInclude Include="Views\ShipmentView.h" />
+    <ClInclude Include="Views\MonitorView.h" />
+    <ClInclude Include="Controllers\AppController.h" />
+    <ClInclude Include="Controllers\OrderController.h" />
+    <ClInclude Include="Controllers\InventoryController.h" />
+    <ClInclude Include="Controllers\ProductionController.h" />
+    <ClInclude Include="Controllers\ShipmentController.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
