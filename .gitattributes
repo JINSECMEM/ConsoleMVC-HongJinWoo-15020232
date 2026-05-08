@@ -1,0 +1,21 @@
+﻿# 모든 텍스트 파일을 CRLF로 강제
+* text=auto eol=crlf
+
+# 명시적 텍스트 파일
+*.md        text eol=crlf
+*.txt       text eol=crlf
+*.json      text eol=crlf
+*.cpp       text eol=crlf
+*.h         text eol=crlf
+*.vcxproj   text eol=crlf
+*.slnx      text eol=crlf
+*.filters   text eol=crlf
+
+# 바이너리 파일 (변환 제외)
+*.exe       binary
+*.dll       binary
+*.lib       binary
+*.obj       binary
+*.db        binary
+*.db-shm    binary
+*.db-wal    binary
